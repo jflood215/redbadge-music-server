@@ -11,8 +11,6 @@ let music = require('./controllers/musiccontroller');
 app.use(require("./middleware/headers"));
 sequelize.sync();
 // app.use(require("./middleware/headers"));
-
-sequelize.sync();
 app.use(express.json());
 
 app.use("/users", users); // signup and login endpoints

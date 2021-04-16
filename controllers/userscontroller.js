@@ -15,7 +15,7 @@ router.post("/register", function (req, res) {
   Users.create(userModel)
     .then(function signupSuccess(users) {
       let token = jwt.sign({ id: users.id }, process.env.JWT_SECRET, {
-        expiresIn: 60 * 60 * 12,
+        expiresIn: 60 * 60 * 2,
       });
       let responseObject = {
         users: users,
